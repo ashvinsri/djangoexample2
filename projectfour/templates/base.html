@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <h1>I am base</h1>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+    <ul>
+    <li><a class='navbar-brand' href='{% url 'list' %}'>Schools</a></li>
+    <li><a class='navbar-link' href='{% url 'admin:index' %}'>Admin</a></li>
+    </ul>
+  </div>
+</nav>
+{% block body_block %}
+
+
+{% endblock %}
+
+
+
+  </body>
+</html>

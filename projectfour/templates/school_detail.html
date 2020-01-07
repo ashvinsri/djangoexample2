@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+
+{% block body_block %}
+<div class='jumbotron'>
+<h1>Welcome to school detail page</h1>
+<h2>School details:</h2>
+<p>Name: {{schooldet.name}}</p>
+<p>Principal: {{schooldet.principal}}</p>
+<p>Location: {{schooldet.location}}</p>
+</div>
+{% for st in schooldet.students.all %}
+
+<p>Student:{{st.name}} whose age is; {{st.age}}</p>
+
+{% endfor %}
+
+<div class="jumbotron">
+  <a class='btn-btn-warning' href="{% url 'update' pk=schooldet.pk %}">Update</a>
+
+</div>
+
+{% endblock %}
